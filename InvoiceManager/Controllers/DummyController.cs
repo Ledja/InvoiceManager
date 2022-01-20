@@ -13,9 +13,9 @@ namespace InvoiceManager.Controllers
     [Route("api/[controller]")]
     public class DummyController : ControllerBase
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<IEnumerable<Invoice>> _logger;
         private readonly IInvoiceService _invoiceService;
-        public DummyController(ILogger logger, IInvoiceService invoiceService)
+        public DummyController(ILogger<IEnumerable<Invoice>> logger, IInvoiceService invoiceService)
         {
             _logger = logger;
             _invoiceService = invoiceService;

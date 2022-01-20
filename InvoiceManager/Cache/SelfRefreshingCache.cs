@@ -9,12 +9,12 @@ namespace SelfRefreshingCache.Cache
         static readonly object _object = new object();
         private bool _isDataValid = true;
         private static TResult _cachedData;
-        private ILogger _logger;
+        private ILogger<TResult> _logger;
         private Func<TResult> _createdCachedItem;
         private Timer refreshPeriodTimer;
         private Timer validityOfCachedDataTimer;
 
-        public SelfRefreshingCache(ILogger logger, TimeSpan refreshPeriod, TimeSpan validityOfCachedData, Func<TResult> createdCachedItem)
+        public SelfRefreshingCache(ILogger<TResult> logger, TimeSpan refreshPeriod, TimeSpan validityOfCachedData, Func<TResult> createdCachedItem)
         {
             _logger = logger;
             _createdCachedItem = createdCachedItem;

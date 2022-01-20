@@ -74,13 +74,12 @@ namespace InvoiceManager.Services.Services
         {
             var editedInvoice = _dbContext.Invoices.Include(i => i.Items).FirstOrDefault(i => i.Id == invoiceId);
 
-            var itemsToAdd = new List<Item>();
+            
             foreach (var item in items)
             {
-                itemsToAdd.Add(item);
+                editedInvoice.Items.Add(item);
             }
-
-            editedInvoice.Items = itemsToAdd;
+                       
             _dbContext.Update(editedInvoice);
             await _dbContext.SaveChangesAsync();
 
