@@ -13,8 +13,7 @@ Please prepare 3 endpoints which have following functionality:
 
 
 
-# InvoiceManager
-.NET Testing Assignment
+# InvoiceManager Implementation 
 
 This repository contains a basic Web API implemented in ASP.NET 5 and secured with a custom ApiKey.
 
