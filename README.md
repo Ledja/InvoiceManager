@@ -29,6 +29,4 @@ Point your browser to https://localhost:5001/swagger/index.html to get the list 
 Requirements:
 .NET 5 installed on your machine
 
-PS: I went with Web API solution because I have never worked on a ASP.NET Core MVC project and it would have take me a lot of time only to study a little bit about it.
-
 
